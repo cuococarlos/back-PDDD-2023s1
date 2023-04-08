@@ -30,6 +30,18 @@ Para demostrar el funcionamiento ejecutar:
 
 ```
 
+## Variables de entorno
+
+Deben crearse un archivo .env con las siguientes variables de entorno:
+
+```bash
+        MONGODB_USER
+        MONGODB_PASSWORD
+        MONGODB_DATABASE
+        MONGODB_PORT
+```
+
+
 ## Uso de pre-commit
 
 Para mantener un codigo ordenado y dentro de los estanderes PEP, necesitamos utilizar pre-commit, por lo cual luego de instalar los requeriments, debemos ejecutar:
@@ -37,4 +49,15 @@ Para mantener un codigo ordenado y dentro de los estanderes PEP, necesitamos uti
 ```bash
         pre-commit install
 
+```
+
+## MongoDB
+Se utilizara pymongo para conectar con una db de Mongo, para realizar esto utilizamos la siguiente linea en el `main.py`:
+```python
+client = MongoClient(
+    "localhost",
+    int(os.getenv("MONGODB_PORT", 27017)),
+    username="nombre_usuario",
+    password="password",
+)
 ```

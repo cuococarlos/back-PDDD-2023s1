@@ -9,8 +9,8 @@ app = Flask(__name__)
 client = MongoClient(
     "localhost",
     int(os.getenv("MONGODB_PORT", 27017)),
-    username="root",
-    password="123456",
+    username=os.getenv("MONGODB_USER", "root"),
+    password=os.getenv("MONGODB_PASSWORD", "root"),
 )
 
 

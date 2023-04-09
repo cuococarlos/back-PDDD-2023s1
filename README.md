@@ -68,3 +68,7 @@ client = MongoClient(
     password="password",
 )
 ```
+
+## Test 
+
+Utilizamos pytest para realizar testeo unitario de la apliación

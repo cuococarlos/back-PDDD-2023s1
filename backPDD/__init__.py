@@ -1,5 +1,9 @@
 import os
 from flask import Flask
+from dotenv import load_dotenv
+from pymongo import MongoClient
+
+load_dotenv()
 
 
 def create_app(test_config=None):
@@ -20,6 +24,14 @@ def create_app(test_config=None):
         os.makedirs(app.instance_path)
     except OSError:
         pass
+
+    # Conexion a mongo
+    # client = MongoClient(
+    #     "localhost",
+    #     int(os.getenv("MONGODB_PORT", 27017)),
+    #     username=os.getenv("MONGODB_USER", "root"),
+    #     password=os.getenv("MONGODB_PASSWORD", "root"),
+    # )
 
     @app.route("/")
     def hello_world():

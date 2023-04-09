@@ -29,3 +29,12 @@ Para demostrar el funcionamiento ejecutar:
 	flask --app main run
 
 ```
+
+## Uso de pre-commit
+
+Para mantener un codigo ordenado y dentro de los estanderes PEP, necesitamos utilizar pre-commit, por lo cual luego de instalar los requeriments, debemos ejecutar:
+
+```bash
+        pre-commit install
+
+```

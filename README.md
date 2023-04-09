@@ -26,9 +26,16 @@ Primero instalar dependencias que se encuentran en requeriments.txt con el coman
 Para demostrar el funcionamiento ejecutar:
 
 ```python
-	flask --app main run
+	flask --app backPDD run
 
 ```
+En modo debug:
+
+```python
+	flask --app backPDD run --debug
+
+```
+
 
 ## Variables de entorno
 
